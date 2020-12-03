@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">InterviewDOT_ID</string>
+    <string name="profile">Profile</string>
+    <string name="galery">Gallery</string>
+    <string name="place">Place</string>
+    <string name="message_double_klik_to_close">Klik sekali lagi untuk keluar</string>
 </resources>
