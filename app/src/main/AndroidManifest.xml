@@ -4,21 +4,39 @@
     package="id.interview.dotid">
 
     <uses-sdk tools:overrideLibrary="me.ibrahimsn.lib"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.InterviewDOT_ID"
+        android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="RtlEnabled">
-        <activity android:name=".Root">
+        <activity
+            android:name=".Root"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".view.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".view.gallery.ActivityDetailGallery"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".view.gallery.ActivityGallery"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".view.wisata.ActivityWisata"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".view.account.ActivityProfile"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

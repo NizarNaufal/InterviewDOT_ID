@@ -8,4 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name = "colorRed">#f84f4f</color>
+    <color name = "colorGreen">#5dc877</color>
+    <color name = "colorOrange">#ffaa0c</color>
+    <color name = "colorLine">#1117483b</color>
+    <color name="backgroundgray">#f2f2f2</color>
+    <color name="gray">#b6b6b6</color>
+    <color name="yellow">#FFC942</color>
 </resources>

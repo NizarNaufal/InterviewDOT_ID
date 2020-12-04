@@ -13,6 +13,7 @@
         android:layout_height="170dp" />
 
     <me.ibrahimsn.lib.CirclesLoadingView
+        android:id="@+id/circle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/gambar"

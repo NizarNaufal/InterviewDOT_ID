@@ -5,7 +5,7 @@ package id.interview.dotid.repository.api
 
 interface MainApi {
 
-        @GET("user")
+        @GET("user.json")
         fun getProfile(
         ): Call<String>
 
@@ -13,7 +13,7 @@ interface MainApi {
         fun getPlace(
         ): Call<String>
 
-        @GET("galery")
+        @GET("gallery.json")
         fun getGalery(
         ): Call<String>
 }

@@ -1,26 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
-    xmlns:app = "http://schemas.android.com/apk/res-auto"
-    android:layout_width = "match_parent"
-    android:layout_height = "match_parent">
-
-    <id.interview.dotid.support.ViewPager
-        android:id = "@+id/view_pager"
-        android:layout_width = "match_parent"
-        android:layout_height = "match_parent"
-        android:layout_above = "@id/bottom_navigation" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id = "@+id/bottom_navigation"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/bottom_navigation_background"
-        android:elevation="8dp"
-        app:itemIconTint="@drawable/bottom_navigation_color_selector"
-        app:labelVisibilityMode="unlabeled"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_menus" />
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.github.captain_miao.optroundcardview.OptRoundCardView
+                    android:id="@+id/detailCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    app:optRoundCardCornerRadius="@dimen/_30sdp"
+                    app:optRoundCardLeftBottomCorner="true"
+                    app:optRoundCardRightBottomCorner="true"
+                    app:optRoundCardLeftTopCorner="false"
+                    app:optRoundCardBackgroundColor="#FFC942"
+                    app:optRoundCardRightTopCorner="false"
+                    app:optRoundCardBottomEdges="false">
+                    <TextView
+                        android:id="@+id/tvNameProduct"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:ellipsize="end"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:text="Hai, DOT ID"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/noto_sans"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/sudah_jajan"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:ellipsize="end"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:text="Sudah pergi belum hari ini?"
+                        android:layout_marginTop="@dimen/_50sdp"
+                        android:fontFamily="@font/noto_sans"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                </com.github.captain_miao.optroundcardview.OptRoundCardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detailCard"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:rowCount="4"
+                        android:columnCount="2"
+                        android:layout_margin="5dp"
+                        android:alignmentMode="alignMargins"
+                        android:layout_gravity="center_horizontal"
+                        android:columnOrderPreserved="false">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_wisata"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            app:cardCornerRadius="43dp"
+                            app:cardElevation="5dp"
+                            app:cardBackgroundColor="#FFC942"
+                            android:layout_margin="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                >
+                                <ImageView
+                                    android:id = "@+id/image_coupon_rv"
+                                    android:layout_width = "50dp"
+                                    android:layout_height = "50dp"
+                                    android:layout_marginTop="@dimen/_30sdp"
+                                    android:src = "@drawable/place" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tempat Wisata"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_gallery"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            app:cardCornerRadius="43dp"
+                            app:cardElevation="5dp"
+                            app:cardBackgroundColor="#FFC942"
+                            android:layout_margin="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                >
+                                <ImageView
+                                    android:id = "@+id/chat_image"
+                                    android:layout_width = "50dp"
+                                    android:layout_height = "50dp"
+                                    android:layout_marginTop="@dimen/_30sdp"
+                                    android:src = "@drawable/place" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gallery Wisata"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </GridLayout>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_profile"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        app:cardCornerRadius="43dp"
+                        app:cardElevation="5dp"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="#FFC942"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+                            <ImageView
+                                android:id = "@+id/riwayat_image"
+                                android:layout_width = "50dp"
+                                android:layout_height = "50dp"
+                                android:layout_marginTop="@dimen/_30sdp"
+                                android:src = "@drawable/place" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Profile"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="18sp"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="10dp"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <FrameLayout
+        android:id="@+id/contaner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </RelativeLayout>

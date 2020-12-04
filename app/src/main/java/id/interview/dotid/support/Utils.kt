@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.android.material.snackbar.Snackbar
 import id.interview.dotid.BuildConfig
 import id.interview.dotid.R
@@ -104,4 +105,26 @@ fun Activity.showSnackBar(view: View, message: String, isLongDuration: Boolean =
         text.setTextColor(ContextCompat.getColor(this, R.color.colorRed))
         snack.show()
     }
+}
+
+fun SwipeRefreshLayout.show() {
+    isRefreshing = true
+}
+
+fun SwipeRefreshLayout.hide() {
+    isRefreshing = false
+}
+fun View.enable() {
+    isEnabled = true
+}
+
+fun View.disable() {
+    isEnabled = false
+}
+
+fun View.visible() {
+    visibility = View.VISIBLE
+}
+fun View.gone() {
+    visibility = View.GONE
 }
