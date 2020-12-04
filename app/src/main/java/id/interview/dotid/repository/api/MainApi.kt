@@ -9,7 +9,7 @@ interface MainApi {
         fun getProfile(
         ): Call<String>
 
-        @GET("place")
+        @GET("place.json")
         fun getPlace(
         ): Call<String>
 
