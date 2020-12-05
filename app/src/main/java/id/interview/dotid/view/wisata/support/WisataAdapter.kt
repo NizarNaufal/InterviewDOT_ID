@@ -19,7 +19,7 @@ class WisataAdapter(val context: Context, var merchants: ArrayList<WisataModels>
         if (merchant.content_wisata[0].type_wisata == "image") {
             initList(p0, merchant.content_wisata as ArrayList<ContentWisata>,p1)
         } else if (merchant.content_wisata[0].type_wisata == "multiple"){
-            initList(p0, merchant.content_wisata as ArrayList<ContentWisata>, p1)
+            initMultipleList(p0, merchant.content_wisata as ArrayList<ContentWisata>, p1)
         }
     }
 
@@ -32,6 +32,19 @@ class WisataAdapter(val context: Context, var merchants: ArrayList<WisataModels>
         p0.itemView.wisatarv?.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = adapterCart
+        }
+    }
+
+
+    private fun initMultipleList(
+            p0: ViewHolder,
+            products: ArrayList<ContentWisata>,
+            p1: Int
+    ) {
+        val adapterMultiple = WisataThreeAdapter(context, products)
+        p0.itemView.multiplerv?.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            adapter = adapterMultiple
         }
     }
 

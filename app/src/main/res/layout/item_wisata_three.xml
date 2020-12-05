@@ -32,7 +32,7 @@
                 android:layout_height="140dp">
 
                 <ImageView
-                    android:id="@+id/image_catalogue_wisata_multiple"
+                    android:id="@+id/image_catalogue_wisata_three"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -46,7 +46,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/title_content"
+                    android:id="@+id/title_three_content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -56,13 +56,13 @@
                     android:text="TextView"
                     android:textColor="@color/black" />
                 <TextView
-                    android:id="@+id/subtitle_content"
+                    android:id="@+id/subtitle_three_content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_below="@+id/title_content"
+                    android:layout_below="@+id/title_three_content"
                     android:text="TextView"
                     android:textColor="@color/black" />
             </RelativeLayout>

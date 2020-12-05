@@ -1,6 +1,7 @@
 package id.interview.dotid.view
 
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import id.interview.dotid.R
 import id.interview.dotid.repository.IView
 import id.interview.dotid.repository.ViewNetworkState
@@ -20,7 +21,13 @@ class HomeActivity : BaseActivity(),ViewNetworkState,IView{
     }
     override fun initView(){
         card_wisata?.setOnClickListener {
-            showActivity(ActivityWisata::class.java)
+            val builder = AlertDialog.Builder(this)
+            builder.setMessage("Menu List Wisata belum tersedia")
+            builder.setPositiveButton("OK"){ _, _ ->
+
+            }
+            builder.show()
+            return@setOnClickListener
         }
         card_gallery?.setOnClickListener {
             showActivity(ActivityGallery::class.java)
